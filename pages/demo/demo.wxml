@@ -1,0 +1,127 @@
+<!--pages/demo.wxml-->
+<view class="page">
+    <!-- 导航栏 -->
+    <nav-bar>第六周</nav-bar>
+ <!-- 详细信息弹窗 -->
+ <mp-half-screen-dialog bindbuttontap="buttontap" bindclose="close" catchtap="innerTap" show="{{show}}" maskClosable="{{true}}" title="课程信息" subTitle="课程信息" desc="" index="{{index}}" list="{{list}}">
+    </mp-half-screen-dialog>
+        <swiper style="height: {{swiperheight}}px; top: {{high}}px">
+        <swiper-item >
+            <view class="kb" style="top: {{high}}px">
+        <!-- 表格第一行 月份和日期信息-->
+        <view class="kb-title">
+            <view class="kb-left-moth">3月</view>
+            <view wx:for="{{time}}" class="kb-title-item">周{{item.weekday}} 
+
+            {{item.date}}日
+            </view>
+            
+        </view>
+        <!-- 表格第二行 上午12节-->
+        <view class="kb-daytime">
+            <view class="kb-left-item">1 2</view>
+            <view class="kb-daytime-item" wx:for="{{list}}" wx:if="{{index<7}}" bindtap="open" data-index="{{index}}">
+                    <text class="kb-font">{{item.subject}}</text>
+                <text class="kb-font"> {{item.classroom}} </text>
+                
+            </view>
+        </view>
+        <!-- 表格第三行 上午34节-->
+        <view class="kb-daytime">
+            <view class="kb-left-item">3 4</view>
+            <view class="kb-daytime-item" wx:for="{{list}}" wx:if="{{index>6&&index<14}}" bindtap="open" data-index="{{index}}">
+                
+                <text class="kb-font">{{item.subject}}</text>
+                <text class="kb-font"> {{item.classroom}} </text>
+            </view>
+        </view>
+        <!-- 表格第四行 中午-->
+        <view class="kb-title-small">中午</view>
+        <!-- 表格第五行 下午56节-->
+        <view class="kb-daytime">
+            <view class="kb-left-item">5 6</view>
+            <view class="kb-daytime-item" wx:for="{{list}}" wx:if="{{index>13&&index<21}}"bindtap="open" data-index="{{index}}">
+                <text class="kb-font">{{item.subject}}</text>
+                <text class="kb-font"> {{item.classroom}} </text>
+            </view>
+        </view>
+        <!-- 表格第六行 下午78节-->
+        <view class="kb-daytime">
+            <view class="kb-left-item">7 8</view>
+            <view class="kb-daytime-item" wx:for="{{list}}" wx:if="{{index>20&&index<28}}"bindtap="open" data-index="{{index}}">
+                <text class="kb-font">{{item.subject}}</text>
+                <text class="kb-font"> {{item.classroom}} </text>
+            </view>
+        </view>
+        <!-- 表格第七行 晚上-->
+        <view class="kb-title-small">晚上</view>
+        <!-- 表格第八行 晚上123节-->
+        <view class="kb-night">
+            <view class="kb-left-item">9 10 11</view>
+            <view class="kb-night-item" wx:for="{{list}}" wx:if="{{index>27&&index<35}}"bindtap="open" data-index="{{index}}">
+                <text class="kb-font">{{item.subject}}</text>
+                <text class="kb-font"> {{item.classroom}} </text>
+            </view>
+        </view>
+    </view>
+        </swiper-item>
+        <swiper-item>
+            <view class="kb" style="top: {{high}}px">
+        <!-- 表格第一行 月份和日期信息-->
+        <view class="kb-title">
+            <view class="kb-left-moth">3月</view>
+            <view wx:for="{{time}}" class="kb-title-item">周{{item.weekday}}{{item.date}}日
+            </view>
+            
+        </view>
+        <!-- 表格第二行 上午12节-->
+        <view class="kb-daytime">
+            <view class="kb-left-item">1 2</view>
+            <view class="kb-daytime-item" wx:for="{{list}}" wx:if="{{index<7}}" bindtap="open" data-index="{{index}}">
+                    <text class="kb-font">{{item.subject}}</text>
+                <text class="kb-font"> {{item.classroom}} </text>
+                
+            </view>
+        </view>
+        <!-- 表格第三行 上午34节-->
+        <view class="kb-daytime">
+            <view class="kb-left-item">3 4</view>
+            <view class="kb-daytime-item" wx:for="{{list}}" wx:if="{{index>6&&index<14}}" bindtap="open" data-index="{{index}}">
+                
+                <text class="kb-font">{{item.subject}}</text>
+                <text class="kb-font"> {{item.classroom}} </text>
+            </view>
+        </view>
+        <!-- 表格第四行 中午-->
+        <view class="kb-title-small">中午</view>
+        <!-- 表格第五行 下午56节-->
+        <view class="kb-daytime">
+            <view class="kb-left-item">5 6</view>
+            <view class="kb-daytime-item" wx:for="{{list}}" wx:if="{{index>13&&index<21}}"bindtap="open" data-index="{{index}}">
+                <text class="kb-font">{{item.subject}}</text>
+                <text class="kb-font"> {{item.classroom}} </text>
+            </view>
+        </view>
+        <!-- 表格第六行 下午78节-->
+        <view class="kb-daytime">
+            <view class="kb-left-item">7 8</view>
+            <view class="kb-daytime-item" wx:for="{{list}}" wx:if="{{index>20&&index<28}}"bindtap="open" data-index="{{index}}">
+                <text class="kb-font">{{item.subject}}</text>
+                <text class="kb-font"> {{item.classroom}} </text>
+            </view>
+        </view>
+        <!-- 表格第七行 晚上-->
+        <view class="kb-title-small">晚上</view>
+        <!-- 表格第八行 晚上123节-->
+        <view class="kb-night">
+            <view class="kb-left-item">9 10 11</view>
+            <view class="kb-night-item" wx:for="{{list}}" wx:if="{{index>27&&index<35}}"bindtap="open" data-index="{{index}}">
+                <text class="kb-font">{{item.subject}}</text>
+                <text class="kb-font"> {{item.classroom}} </text>
+            </view>
+        </view>
+    </view>
+        </swiper-item>
+    </swiper>
+   
+</view>

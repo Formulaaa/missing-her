@@ -1,0 +1,8 @@
+<!--pages/user/user.wxml-->
+<nav-bar></nav-bar>
+<view class="container">
+        <form bindsubmit="submit">
+        <input class="input" placeholder="请输入学号" name="stid"></input>
+        <button form-type="submit" type="primary">点击提交</button>
+        </form>
+</view>

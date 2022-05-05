@@ -1,0 +1,56 @@
+@import "/iconfont.wxss";
+/* 导航栏css开始*/
+.left-capsule {
+    background-color: rgb(253, 253, 253);
+}
+
+.left-capsule .left-capsule-nav {
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+.left-capsule-nav .left-capsule-nav-content {
+    width: 85px;
+    text-align: center;
+    border-radius: 50px;
+    position: relative;
+    top: 26px;
+    left: 20px;
+    box-shadow: 0px 0px 1px 0.2px rgb(112, 170, 218);
+    background-color: #ffffff;
+    height: 29px;
+}
+
+.left-capsule-nav-content view {
+    display: inline;
+    width: 35px;
+    position: relative;
+}
+
+.left-capsule-nav-content .back {
+        right: 5px;
+        bottom: 3px;
+}
+
+.left-capsule-nav-content .line {
+    top: 3px;
+    width: 1px;
+    border-left: solid hsl(0, 1%, 56%) thin;
+    height: 17px;
+    display: inline-block;
+}
+
+.left-capsule-nav-content .home {
+    left: 5px;
+    bottom: 3px;
+}
+/* 导航栏css结束*/
+/* 内容*/
+.main-content {
+    background-color: rgb(90, 199, 100);
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+}

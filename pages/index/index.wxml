@@ -1,0 +1,7 @@
+<!--index.wxml-->
+  <nav-bar></nav-bar>
+<view class="container">
+  <view class="usermotto">
+    <text class="user-motto">helloworld</text>
+  </view>
+</view>

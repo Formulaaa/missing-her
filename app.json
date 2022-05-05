@@ -1,0 +1,22 @@
+{
+    "pages": [
+        "pages/demo/demo",
+        "pages/index/index",
+        "pages/user/user",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "navigationStyle": "custom",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTitleText": "成理课表",
+        "navigationBarTextStyle": "black"
+    },
+    "usingComponents": {
+        "mp-cell": "weui-miniprogram/miniprogram_dist/cell/cell",
+        "nav-bar": "/pages/components/navbar/navbar",
+        "mp-form": "weui-miniprogram/miniprogram_dist/form/form",
+        "mp-half-screen-dialog": "weui-miniprogram/miniprogram_dist/half-screen-dialog/half-screen-dialog"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

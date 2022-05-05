@@ -1,0 +1,30 @@
+<!--pages/testQ/index.wxml-->
+
+<!-- 左上角胶囊开始-->
+<!--left-capsule 是最上层，可以设置背景-->
+<view class="left-capsule">
+  <!--left-capsule-nav 是用于定位左上角的位置-->
+  <view class="left-capsule-nav" style="height:{{navHeight}}px;">
+    <!--left-capsule-nav-content 是 胶囊主要内容-->
+    <view style="position:relative;top:{{capsuleTop}}px;" class="left-capsule-nav-content">
+      <!--back 胶囊 返回按钮-->
+      <view class="back" bindtap="logIn">
+        <!-- 我这个图标引入的是 vant库的icon，如果不是使用vant的话 得自定义一个icon-->
+        <icon class="iconfont icon-a-huaban2fuben14" bindtap="logIn"></icon>
+      </view>
+      <!-- line 胶囊 中间线条-->
+      <view class="line"></view>
+      <!-- home 胶囊 返回首页按钮-->
+      <view class="home" bindtap="kb">
+        <!-- 我这个图标引入的是 vant库的icon，如果不是使用vant的话 得自定义一个icon-->
+        <icon class="iconfont icon-a-huaban2fuben11"></icon>
+      </view>
+    </view>
+  </view>
+  <!-- 以上 可以 封装成自定义组件,在引入，这个地方是 胶囊外的内容-->
+   <!-- <view class="main-content" style="top:{{capsuleTop+60}}px;">
+    我是测试左上角胶囊
+  <icon class="iconfont icon-shouye"></icon>
+  </view> -->
+  <!-- 左上角胶囊结束-->
+</view>
